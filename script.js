@@ -16,6 +16,7 @@ let numbers = [ 1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6 ];
 */
 function getFourthNum(){
     // Your answer here:
+    return numbers[3];
 }
 
 /*
@@ -24,6 +25,12 @@ function getFourthNum(){
 function smallNums(){
     let smallNums = [];
     // Your answer here:
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] < 10) {
+        smallNums.push(numbers[i]);
+      }
+    }
+    return smallNums;
 }
 
 /*
@@ -31,6 +38,8 @@ function smallNums(){
 */
 function addNums(){
     // Your answer here:
+    numbers.push(12, 99, 101);
+    return numbers;
 }
 
 
@@ -54,6 +63,8 @@ let film = {
 */
 function addBoxOffice(){
     // Your answer here:
+    film.boxoffice = 269061;
+    return film;
 }
 
 /*
@@ -61,6 +72,8 @@ function addBoxOffice(){
 */
 function addActor(){
     // Your answer here:
+    film.actors.push("Yukiko Shimazaki");
+    return film;
 }
 
 /*
@@ -68,12 +81,9 @@ function addActor(){
 */
 function getLosses(){
     // Your answer here:
+    film.loss = film.boxoffice - film.budget;
+    return film.loss;
 }
-
-
-
-
-
 
 /*
 7. Iterate over "letterVals" and "numberVals". Concatenate the values from the two arrays and store the new values in the "vals" array. Return "vals".
@@ -87,6 +97,10 @@ let letterVals = [ "v", "x", "r", "f", "p" ];
 function interleave(){
     let vals = [];
     // Your answer here:
+    for (let i = 0; i < numberVals.length; i++) {
+      vals.push(letterVals[i] + numberVals[i]);
+    }
+    return vals;
 }
 
 
@@ -104,4 +118,10 @@ let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close"
 function union(){
     let same = [];
     // Your answer here:
+    for (let i = 0; i < first.length; i++) {
+      if (first[i] === second[i]) {
+        same.push(first[i]);
+      }
+    }
+    return same;
 }
